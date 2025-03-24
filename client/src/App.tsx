@@ -1,9 +1,12 @@
 import { useState, ReactElement } from "react";
-import CollorButtons from "./components/CollorButtons";
+import { Routes, Route } from "react-router";
 import MainNavbar from "./components/MainNavbar";
 import ThemeButton from "./components/ThemeButton";
+import HomePage from "./components/MainPages/HomePage";
+import BuildDataPage from "./components/MainPages/BuildDataPage";
+import BuildPlanData from "./components/MainPages/BuildPlanData";
 
-export enum Themes {
+export const enum Themes {
   LIGHT = "light",
   DARK = "dark",
 }
@@ -21,8 +24,11 @@ function App(): ReactElement {
         <MainNavbar>
           <ThemeButton index={index} setIndex={setIndex} themes={themes} />
         </MainNavbar>
-
-        <CollorButtons />
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="buildData" element={<BuildDataPage />} />
+          <Route path="buildPlan" element={<BuildPlanData />} />
+        </Routes>
       </div>
     </div>
   );
