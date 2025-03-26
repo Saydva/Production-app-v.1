@@ -1,25 +1,18 @@
 import { useState, ReactElement } from "react";
 import { Routes, Route } from "react-router";
-import MainNavbar from "./components/MainNavbar";
-import ThemeButton from "./components/ThemeButton";
+import MainNavbar from "./components/AppComponents/MainNavbar";
+import ThemeButton from "./components/AppComponents/ThemeButton";
 import HomePage from "./components/MainPages/HomePage";
 import BuildDataPage from "./components/MainPages/BuildDataPage";
 import BuildPlanData from "./components/MainPages/BuildPlanData";
-
-export const enum Themes {
-  LIGHT = "light",
-  DARK = "dark",
-}
+import { Themes } from "./exports/myTypes";
 
 function App(): ReactElement {
   const themes: Themes[] = [Themes.LIGHT, Themes.DARK];
   const [index, setIndex] = useState<number>(0);
 
   return (
-    <div
-      data-theme={themes[index]}
-      className=" h-screen transition-colors duration-500"
-    >
+    <div data-theme={themes[index]} className=" h-screen ">
       <div id="my-app-container">
         <MainNavbar>
           <ThemeButton index={index} setIndex={setIndex} themes={themes} />

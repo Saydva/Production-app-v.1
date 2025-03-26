@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Themes } from "../App";
+import { Themes } from "../../exports/myTypes";
 
 type ThemeButtonProps = {
   index: number;
