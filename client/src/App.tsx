@@ -12,7 +12,7 @@ function App(): ReactElement {
   const [index, setIndex] = useState<number>(0);
 
   return (
-    <div data-theme={themes[index]} className=" h-screen ">
+    <div data-theme={themes[index]} className=" min-h-dvw  ">
       <div id="my-app-container">
         <MainNavbar>
           <ThemeButton index={index} setIndex={setIndex} themes={themes} />
