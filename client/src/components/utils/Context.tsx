@@ -1,3 +1,5 @@
+import { createContext } from "react";
+
 type operation = {
   name: string;
   stTime: number;
@@ -53,3 +55,13 @@ type model = {
   operation: operation[];
   __v: number;
 };
+
+export type AllProps =
+  | model
+  | subPiece
+  | piece
+  | attribute
+  | description
+  | operation;
+
+export const MyContext = createContext<null | object | AllProps>(null);

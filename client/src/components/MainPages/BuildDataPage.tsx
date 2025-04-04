@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Model from "../BuildComponents/Model";
 import SelectPartToUpdate from "../BuildComponents/SubComponents/SelectPartToUpdate";
+import { AllProps, MyContext } from "../utils/Context";
+
 // import Test from "../BuildComponents/SubComponents/Test";
 
 const FetchSimulation = [
@@ -439,16 +441,17 @@ const FetchSimulation = [
 ];
 
 const BuildDataPage = () => {
-  const [object, setObject] = useState<object | null>(null);
-  console.log(object);
+  const [dbObject, setDbObject] = useState<AllProps | null>(null);
+
   return (
     <div>
       <div className="flex flex-col gap-2 mx-2">
         {/* <Test props={FetchSimulation} /> */}
-
-        <h3>You are building a model data</h3>
-        <SelectPartToUpdate array={FetchSimulation} setObject={setObject} />
-        <Model />
+        <MyContext.Provider value={{ dbObject, setDbObject }}>
+          <h3>You are building a model data</h3>
+          <SelectPartToUpdate array={FetchSimulation} />
+          <Model />
+        </MyContext.Provider>
       </div>
     </div>
   );
