@@ -1,15 +1,13 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Model from "../BuildComponents/Model";
 import SelectPartToUpdate from "../BuildComponents/SubComponents/SelectPartToUpdate";
-import { AllProps, MyContext } from "../utils/Context";
+import { ProductionProvider, ProductionContext } from "../utils/Context";
 
 // import Test from "../BuildComponents/SubComponents/Test";
 
 const FetchSimulation = [
   {
-    _id: {
-      $oid: "67c399d543389cc312584189",
-    },
+    _id: "dodo",
     partName: "qweq",
     partStTime: 1354381,
     piecec: [
@@ -441,17 +439,18 @@ const FetchSimulation = [
 ];
 
 const BuildDataPage = () => {
-  const [dbObject, setDbObject] = useState<AllProps | null>(null);
+  const { dbObject } = useContext(ProductionContext);
+  console.log(dbObject);
 
   return (
     <div>
       <div className="flex flex-col gap-2 mx-2">
         {/* <Test props={FetchSimulation} /> */}
-        <MyContext.Provider value={{ dbObject, setDbObject }}>
+        <ProductionProvider>
           <h3>You are building a model data</h3>
           <SelectPartToUpdate array={FetchSimulation} />
           <Model />
-        </MyContext.Provider>
+        </ProductionProvider>
       </div>
     </div>
   );

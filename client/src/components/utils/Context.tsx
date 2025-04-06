@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState, ReactNode, SetStateAction } from "react";
 
 type operation = {
   name: string;
@@ -12,8 +12,6 @@ type descriptionObject = {
   __v: number;
 };
 
-type description = descriptionObject[];
-
 type attributeObject = {
   _id: string;
   name: string;
@@ -21,15 +19,13 @@ type attributeObject = {
   __v: number;
 };
 
-type attribute = attributeObject[];
-
 type piece = {
   _id: string;
   partName: string;
   partStTime: number;
-  attribute: attributeObject[];
-  description: descriptionObject[];
-  operation: operation[];
+  attributes: attributeObject[];
+  descriptions: descriptionObject[];
+  operations: operation[];
   __v: number;
 };
 
@@ -37,10 +33,10 @@ type subPiece = {
   _id: number;
   partName: string;
   partStTime: number;
-  piecec: [];
-  attribute: attributeObject[];
-  description: descriptionObject[];
-  operation: operation[];
+  pieces: [];
+  attributes: attributeObject[];
+  descriptions: descriptionObject[];
+  operations: operation[];
   __v: number;
 };
 
@@ -48,20 +44,48 @@ type model = {
   _id: number;
   partName: string;
   partStTime: number;
-  piecec: piece[];
-  subPiecec: subPiece[];
-  attribute: attributeObject[];
-  description: descriptionObject[];
-  operation: operation[];
+  pieces: piece[];
+  subPieces: subPiece[];
+  attributes: attributeObject[];
+  descriptions: descriptionObject[];
+  operations: operation[];
   __v: number;
 };
 
-export type AllProps =
-  | model
-  | subPiece
-  | piece
-  | attribute
-  | description
-  | operation;
+// type ProductionPlan = {
+//   _id: number;
+//   title: string;
+//   models: model[];
+//   __v: number;
+// };
 
-export const MyContext = createContext<null | object | AllProps>(null);
+/// create context ===>>>
+
+type ProductionContextState = {
+  dbObject: model[];
+  setDbObject: React.Dispatch<SetStateAction<model[]>>;
+};
+
+type ChildrenProps = {
+  children: ReactNode;
+};
+const contextDefaultValues: ProductionContextState = {
+  dbObject: [],
+  setDbObject: () => {},
+};
+
+export const ProductionContext =
+  createContext<ProductionContextState>(contextDefaultValues);
+
+export const ProductionProvider = ({ children }: ChildrenProps) => {
+  const [dbObject, setDbObject] = useState<model[]>(
+    contextDefaultValues.dbObject
+  );
+  return (
+    <ProductionContext.Provider value={{ dbObject, setDbObject }}>
+      {children}
+    </ProductionContext.Provider>
+  );
+};
+
+export default ProductionProvider;
