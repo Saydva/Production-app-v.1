@@ -15,8 +15,7 @@ const defaultValueOption = {
 };
 
 const SelectPartToUpdate = ({ array }: SelectPartToUpdate) => {
-  const { setDbObject, dbObject } = useContext(ProductionContext);
-  console.log(dbObject);
+  const { setDbObject } = useContext(ProductionContext);
 
   const ListOptions = array.map((e: NameStTime, index: number) => {
     return (

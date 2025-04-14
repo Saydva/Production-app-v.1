@@ -1,7 +1,6 @@
-import { useContext } from "react";
 import Model from "../BuildComponents/Model";
 import SelectPartToUpdate from "../BuildComponents/SubComponents/SelectPartToUpdate";
-import { ProductionProvider, ProductionContext } from "../utils/Context";
+import { ProductionProvider } from "../utils/Context";
 
 // import Test from "../BuildComponents/SubComponents/Test";
 
@@ -439,9 +438,6 @@ const FetchSimulation = [
 ];
 
 const BuildDataPage = () => {
-  const { dbObject } = useContext(ProductionContext);
-  console.log(dbObject);
-
   return (
     <div>
       <div className="flex flex-col gap-2 mx-2">

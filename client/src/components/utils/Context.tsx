@@ -62,15 +62,15 @@ type model = {
 /// create context ===>>>
 
 type ProductionContextState = {
-  dbObject: model[];
-  setDbObject: React.Dispatch<SetStateAction<model[]>>;
+  dbObject: model | null;
+  setDbObject: React.Dispatch<SetStateAction<model | null>>;
 };
 
 type ChildrenProps = {
   children: ReactNode;
 };
 const contextDefaultValues: ProductionContextState = {
-  dbObject: [],
+  dbObject: null,
   setDbObject: () => {},
 };
 
@@ -78,9 +78,7 @@ export const ProductionContext =
   createContext<ProductionContextState>(contextDefaultValues);
 
 export const ProductionProvider = ({ children }: ChildrenProps) => {
-  const [dbObject, setDbObject] = useState<model[]>(
-    contextDefaultValues.dbObject
-  );
+  const [dbObject, setDbObject] = useState<model | null>(null);
   return (
     <ProductionContext.Provider value={{ dbObject, setDbObject }}>
       {children}
