@@ -9,25 +9,24 @@ const FetchSimulation = [
     _id: "dodo",
     partName: "qweq",
     partStTime: 1354381,
-    piecec: [
-      [
-        {
-          _id: "67c0dff63698213a19a3d8d6",
-          partName: "1",
-          partStTime: 1,
-          attribute: [],
-          descrition: [],
-          operation: [
-            {
-              name: "23123123",
-              stTime: 1,
-            },
-          ],
-          __v: 0,
-        },
-      ],
+    pieces: [
+      {
+        _id: "67c0dff63698213a19a3d8d6",
+        partName: "1",
+        partStTime: 1,
+        attribute: [],
+        descrition: [],
+        operation: [
+          {
+            name: "23123123",
+            stTime: 1,
+          },
+        ],
+        __v: 0,
+      },
     ],
-    subPiecec: [
+
+    subPieces: [
       [
         {
           _id: "67c399b343389cc31258417f",
@@ -225,25 +224,23 @@ const FetchSimulation = [
     },
     partName: "231",
     partStTime: 1231381,
-    piecec: [
-      [
-        {
-          _id: "67c31cae061420cae3b2ac4d",
-          partName: "testing",
-          partStTime: 1,
-          attribute: [],
-          descrition: [],
-          operation: [
-            {
-              name: "test",
-              stTime: 1,
-            },
-          ],
-          __v: 0,
-        },
-      ],
+    pieces: [
+      {
+        _id: "67c31cae061420cae3b2ac4d",
+        partName: "testing",
+        partStTime: 1,
+        attribute: [],
+        descrition: [],
+        operation: [
+          {
+            name: "test",
+            stTime: 1,
+          },
+        ],
+        __v: 0,
+      },
     ],
-    subPiecec: [
+    subPieces: [
       [
         {
           _id: "67c399b343389cc31258417f",

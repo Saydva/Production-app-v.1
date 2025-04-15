@@ -19,7 +19,7 @@ type attributeObject = {
   __v: number;
 };
 
-type piece = {
+export type piece = {
   _id: string;
   partName: string;
   partStTime: number;
@@ -46,9 +46,9 @@ type model = {
   partStTime: number;
   pieces: piece[];
   subPieces: subPiece[];
-  attributes: attributeObject[];
-  descriptions: descriptionObject[];
-  operations: operation[];
+  attribute: attributeObject[];
+  description: descriptionObject[];
+  operation: operation[];
   __v: number;
 };
 

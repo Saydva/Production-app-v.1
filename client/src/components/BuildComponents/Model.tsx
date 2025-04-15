@@ -12,12 +12,12 @@ const Model = () => {
     <div className="flex flex-col gap-2">
       <h1>This is a model component</h1>
       <NameInput props={dbObject?.partName} />
-      <StandartTimeInput />
+      <StandartTimeInput props={dbObject?.partStTime} />
+      <SelectComponent props={dbObject?.pieces} />
+      {/* <SelectComponent />
       <SelectComponent />
       <SelectComponent />
-      <SelectComponent />
-      <SelectComponent />
-      <OperationComponent />
+      <OperationComponent /> */}
     </div>
   );
 };
