@@ -31,7 +31,7 @@ const NameInput = ({ props }: PropType) => {
         }}
       />
       <button
-        className="btn bg-slate-500 ml-2"
+        className="btn btn-accent mx-2 min-w-20"
         onClick={() => handleNameInputValue()}
       >
         Save

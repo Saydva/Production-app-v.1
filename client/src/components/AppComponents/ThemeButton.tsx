@@ -34,7 +34,7 @@ const ThemeButton: FC<ThemeButtonProps> = ({ setIndex, themes, index }) => {
   return (
     <button
       onClick={animeItem}
-      className={`bg-info cursor-pointer rounded-lg p-2 m-2 ${
+      className={`btn btn-info cursor-pointer  p-2 m-2 ${
         animate ? " motion-preset-focus " : " "
       } `}
     >

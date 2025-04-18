@@ -1,14 +1,21 @@
 import { ReactElement, ReactNode } from "react";
 import { piece } from "../../utils/Context";
+import { subPiece } from "../../utils/Context";
 
-type propsArrayType = {
+type propsPieceType = {
   props: piece[] | undefined;
 };
 
-const SelectComponent = ({ props }: propsArrayType) => {
-  const listOfPropsArray: any = props?.map((item) => {
-    <li>{JSON.stringify(item)}</li>;
-  });
+type propsSubpieceType = {
+  props: subPiece[] | undefined;
+};
+
+const SelectComponent = ({ props }: propsPieceType | propsSubpieceType) => {
+  const listOfPropsArray: any = props?.map((item, index) => (
+    <li key={index} className="alert alert-info max-w-80 my-2">
+      {JSON.stringify(item.partName)}
+    </li>
+  ));
 
   return (
     <div>
@@ -18,6 +25,7 @@ const SelectComponent = ({ props }: propsArrayType) => {
         <option>Amber</option>
         <option>Velvet</option>
       </select>
+      <ul>{listOfPropsArray}</ul>
     </div>
   );
 };

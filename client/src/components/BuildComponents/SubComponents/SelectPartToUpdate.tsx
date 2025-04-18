@@ -34,9 +34,12 @@ const SelectPartToUpdate = ({ array }: SelectPartToUpdate) => {
           setDbObject(e.target.value ? JSON.parse(e.target.value) : "")
         }
       >
-        <option value={defaultValueOption.partName}>Pick Part tu udate</option>
+        <option value={defaultValueOption.partName}>
+          Create Model or pick one to change
+        </option>
         {ListOptions}
       </select>
+      <button className="btn btn-secondary mx-2 min-w-20">Create</button>
     </div>
   );
 };

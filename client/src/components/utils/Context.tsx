@@ -12,7 +12,7 @@ type descriptionObject = {
   __v: number;
 };
 
-type attributeObject = {
+export type attributeObject = {
   _id: string;
   name: string;
   value: string;
@@ -29,7 +29,7 @@ export type piece = {
   __v: number;
 };
 
-type subPiece = {
+export type subPiece = {
   _id: number;
   partName: string;
   partStTime: number;

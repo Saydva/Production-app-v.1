@@ -14,8 +14,8 @@ const Model = () => {
       <NameInput props={dbObject?.partName} />
       <StandartTimeInput props={dbObject?.partStTime} />
       <SelectComponent props={dbObject?.pieces} />
+      <SelectComponent props={dbObject?.subPieces} />
       {/* <SelectComponent />
-      <SelectComponent />
       <SelectComponent />
       <OperationComponent /> */}
     </div>

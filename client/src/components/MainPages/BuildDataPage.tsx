@@ -1,3 +1,4 @@
+import BuildNavBar from "../AppComponents/BuildNavBar";
 import Model from "../BuildComponents/Model";
 import SelectPartToUpdate from "../BuildComponents/SubComponents/SelectPartToUpdate";
 import { ProductionProvider } from "../utils/Context";
@@ -25,181 +26,177 @@ const FetchSimulation = [
         __v: 0,
       },
     ],
-
     subPieces: [
-      [
-        {
-          _id: "67c399b343389cc31258417f",
-          partName: "asdaSDA",
-          partStTime: 1231257,
-          piecec: [
-            [
-              {
-                _id: "67c3976043389cc312584142",
-                partName: "jhgsdljfas",
-                partStTime: 6,
-                attribute: [
-                  [
-                    {
-                      _id: "67c3820043389cc312583f14",
-                      name: "asdadsas",
-                      value: "dasdasda",
-                      __v: 0,
-                    },
-                  ],
-                ],
-                descrition: [],
-                operation: [
-                  {
-                    name: "sadfsaf",
-                    stTime: 6,
-                  },
-                ],
-                __v: 0,
-              },
-              {
-                _id: "67c3976043389cc312584142",
-                partName: "jhgsdljfas",
-                partStTime: 6,
-                attribute: [
-                  [
-                    {
-                      _id: "67c3820043389cc312583f14",
-                      name: "asdadsas",
-                      value: "dasdasda",
-                      __v: 0,
-                    },
-                  ],
-                ],
-                descrition: [],
-                operation: [
-                  {
-                    name: "sadfsaf",
-                    stTime: 6,
-                  },
-                ],
-                __v: 0,
-              },
-              {
-                _id: "67c3976043389cc312584142",
-                partName: "jhgsdljfas",
-                partStTime: 6,
-                attribute: [
-                  [
-                    {
-                      _id: "67c3820043389cc312583f14",
-                      name: "asdadsas",
-                      value: "dasdasda",
-                      __v: 0,
-                    },
-                  ],
-                ],
-                descrition: [],
-                operation: [
-                  {
-                    name: "sadfsaf",
-                    stTime: 6,
-                  },
-                ],
-                __v: 0,
-              },
-              {
-                _id: "67c3976043389cc312584142",
-                partName: "jhgsdljfas",
-                partStTime: 6,
-                attribute: [
-                  [
-                    {
-                      _id: "67c3820043389cc312583f14",
-                      name: "asdadsas",
-                      value: "dasdasda",
-                      __v: 0,
-                    },
-                  ],
-                ],
-                descrition: [],
-                operation: [
-                  {
-                    name: "sadfsaf",
-                    stTime: 6,
-                  },
-                ],
-                __v: 0,
-              },
-            ],
-            [
-              {
-                _id: "67c31cae061420cae3b2ac4d",
-                partName: "testing",
-                partStTime: 1,
-                attribute: [],
-                descrition: [],
-                operation: [
-                  {
-                    name: "test",
-                    stTime: 1,
-                  },
-                ],
-                __v: 0,
-              },
-            ],
-            [
-              {
-                _id: "67c0dff63698213a19a3d8d6",
-                partName: "1",
-                partStTime: 1,
-                attribute: [],
-                descrition: [],
-                operation: [
-                  {
-                    name: "23123123",
-                    stTime: 1,
-                  },
-                ],
-                __v: 0,
-              },
-            ],
-          ],
-          attribute: [
-            [
-              {
-                _id: "67c3820543389cc312583f16",
-                name: "asdasdas",
-                value: "dasdasdas",
-                __v: 0,
-              },
-            ],
-          ],
-          descrition: [
-            [
-              {
-                _id: "67c3810543389cc312583eb8",
-                name: "RWERWQERQW",
-                value: "ERWERQWER",
-                __v: 0,
-              },
-            ],
-          ],
-          operation: [
+      {
+        _id: "67c399b343389cc31258417f",
+        partName: "asdaSDA",
+        partStTime: 1231257,
+        piecec: [
+          [
             {
-              name: "asdA",
-              stTime: 1231231,
+              _id: "67c3976043389cc312584142",
+              partName: "jhgsdljfas",
+              partStTime: 6,
+              attribute: [
+                [
+                  {
+                    _id: "67c3820043389cc312583f14",
+                    name: "asdadsas",
+                    value: "dasdasda",
+                    __v: 0,
+                  },
+                ],
+              ],
+              descrition: [],
+              operation: [
+                {
+                  name: "sadfsaf",
+                  stTime: 6,
+                },
+              ],
+              __v: 0,
+            },
+            {
+              _id: "67c3976043389cc312584142",
+              partName: "jhgsdljfas",
+              partStTime: 6,
+              attribute: [
+                [
+                  {
+                    _id: "67c3820043389cc312583f14",
+                    name: "asdadsas",
+                    value: "dasdasda",
+                    __v: 0,
+                  },
+                ],
+              ],
+              descrition: [],
+              operation: [
+                {
+                  name: "sadfsaf",
+                  stTime: 6,
+                },
+              ],
+              __v: 0,
+            },
+            {
+              _id: "67c3976043389cc312584142",
+              partName: "jhgsdljfas",
+              partStTime: 6,
+              attribute: [
+                [
+                  {
+                    _id: "67c3820043389cc312583f14",
+                    name: "asdadsas",
+                    value: "dasdasda",
+                    __v: 0,
+                  },
+                ],
+              ],
+              descrition: [],
+              operation: [
+                {
+                  name: "sadfsaf",
+                  stTime: 6,
+                },
+              ],
+              __v: 0,
+            },
+            {
+              _id: "67c3976043389cc312584142",
+              partName: "jhgsdljfas",
+              partStTime: 6,
+              attribute: [
+                [
+                  {
+                    _id: "67c3820043389cc312583f14",
+                    name: "asdadsas",
+                    value: "dasdasda",
+                    __v: 0,
+                  },
+                ],
+              ],
+              descrition: [],
+              operation: [
+                {
+                  name: "sadfsaf",
+                  stTime: 6,
+                },
+              ],
+              __v: 0,
             },
           ],
-          __v: 0,
-        },
-      ],
+          [
+            {
+              _id: "67c31cae061420cae3b2ac4d",
+              partName: "testing",
+              partStTime: 1,
+              attribute: [],
+              descrition: [],
+              operation: [
+                {
+                  name: "test",
+                  stTime: 1,
+                },
+              ],
+              __v: 0,
+            },
+          ],
+          [
+            {
+              _id: "67c0dff63698213a19a3d8d6",
+              partName: "1",
+              partStTime: 1,
+              attribute: [],
+              descrition: [],
+              operation: [
+                {
+                  name: "23123123",
+                  stTime: 1,
+                },
+              ],
+              __v: 0,
+            },
+          ],
+        ],
+        attribute: [
+          [
+            {
+              _id: "67c3820543389cc312583f16",
+              name: "asdasdas",
+              value: "dasdasdas",
+              __v: 0,
+            },
+          ],
+        ],
+        descrition: [
+          [
+            {
+              _id: "67c3810543389cc312583eb8",
+              name: "RWERWQERQW",
+              value: "ERWERQWER",
+              __v: 0,
+            },
+          ],
+        ],
+        operation: [
+          {
+            name: "asdA",
+            stTime: 1231231,
+          },
+        ],
+        __v: 0,
+      },
     ],
     attribute: [
-      [
-        {
-          _id: "67c3820043389cc312583f14",
-          name: "asdadsas",
-          value: "dasdasda",
-          __v: 0,
-        },
-      ],
+      {
+        _id: "67c3820043389cc312583f14",
+        name: "asdadsas",
+        value: "dasdasda",
+        __v: 0,
+      },
     ],
+
     description: [
       [
         {
@@ -241,168 +238,166 @@ const FetchSimulation = [
       },
     ],
     subPieces: [
-      [
-        {
-          _id: "67c399b343389cc31258417f",
-          partName: "asdaSDA",
-          partStTime: 1231257,
-          piecec: [
-            [
-              {
-                _id: "67c3976043389cc312584142",
-                partName: "jhgsdljfas",
-                partStTime: 6,
-                attribute: [
-                  [
-                    {
-                      _id: "67c3820043389cc312583f14",
-                      name: "asdadsas",
-                      value: "dasdasda",
-                      __v: 0,
-                    },
-                  ],
-                ],
-                descrition: [],
-                operation: [
-                  {
-                    name: "sadfsaf",
-                    stTime: 6,
-                  },
-                ],
-                __v: 0,
-              },
-              {
-                _id: "67c3976043389cc312584142",
-                partName: "jhgsdljfas",
-                partStTime: 6,
-                attribute: [
-                  [
-                    {
-                      _id: "67c3820043389cc312583f14",
-                      name: "asdadsas",
-                      value: "dasdasda",
-                      __v: 0,
-                    },
-                  ],
-                ],
-                descrition: [],
-                operation: [
-                  {
-                    name: "sadfsaf",
-                    stTime: 6,
-                  },
-                ],
-                __v: 0,
-              },
-              {
-                _id: "67c3976043389cc312584142",
-                partName: "jhgsdljfas",
-                partStTime: 6,
-                attribute: [
-                  [
-                    {
-                      _id: "67c3820043389cc312583f14",
-                      name: "asdadsas",
-                      value: "dasdasda",
-                      __v: 0,
-                    },
-                  ],
-                ],
-                descrition: [],
-                operation: [
-                  {
-                    name: "sadfsaf",
-                    stTime: 6,
-                  },
-                ],
-                __v: 0,
-              },
-              {
-                _id: "67c3976043389cc312584142",
-                partName: "jhgsdljfas",
-                partStTime: 6,
-                attribute: [
-                  [
-                    {
-                      _id: "67c3820043389cc312583f14",
-                      name: "asdadsas",
-                      value: "dasdasda",
-                      __v: 0,
-                    },
-                  ],
-                ],
-                descrition: [],
-                operation: [
-                  {
-                    name: "sadfsaf",
-                    stTime: 6,
-                  },
-                ],
-                __v: 0,
-              },
-            ],
-            [
-              {
-                _id: "67c31cae061420cae3b2ac4d",
-                partName: "testing",
-                partStTime: 1,
-                attribute: [],
-                descrition: [],
-                operation: [
-                  {
-                    name: "test",
-                    stTime: 1,
-                  },
-                ],
-                __v: 0,
-              },
-            ],
-            [
-              {
-                _id: "67c0dff63698213a19a3d8d6",
-                partName: "1",
-                partStTime: 1,
-                attribute: [],
-                descrition: [],
-                operation: [
-                  {
-                    name: "23123123",
-                    stTime: 1,
-                  },
-                ],
-                __v: 0,
-              },
-            ],
-          ],
-          attribute: [
-            [
-              {
-                _id: "67c3820543389cc312583f16",
-                name: "asdasdas",
-                value: "dasdasdas",
-                __v: 0,
-              },
-            ],
-          ],
-          descrition: [
-            [
-              {
-                _id: "67c3810543389cc312583eb8",
-                name: "RWERWQERQW",
-                value: "ERWERQWER",
-                __v: 0,
-              },
-            ],
-          ],
-          operation: [
+      {
+        _id: "67c399b343389cc31258417f",
+        partName: "asdaSDA",
+        partStTime: 1231257,
+        piecec: [
+          [
             {
-              name: "asdA",
-              stTime: 1231231,
+              _id: "67c3976043389cc312584142",
+              partName: "jhgsdljfas",
+              partStTime: 6,
+              attribute: [
+                [
+                  {
+                    _id: "67c3820043389cc312583f14",
+                    name: "asdadsas",
+                    value: "dasdasda",
+                    __v: 0,
+                  },
+                ],
+              ],
+              descrition: [],
+              operation: [
+                {
+                  name: "sadfsaf",
+                  stTime: 6,
+                },
+              ],
+              __v: 0,
+            },
+            {
+              _id: "67c3976043389cc312584142",
+              partName: "jhgsdljfas",
+              partStTime: 6,
+              attribute: [
+                [
+                  {
+                    _id: "67c3820043389cc312583f14",
+                    name: "asdadsas",
+                    value: "dasdasda",
+                    __v: 0,
+                  },
+                ],
+              ],
+              descrition: [],
+              operation: [
+                {
+                  name: "sadfsaf",
+                  stTime: 6,
+                },
+              ],
+              __v: 0,
+            },
+            {
+              _id: "67c3976043389cc312584142",
+              partName: "jhgsdljfas",
+              partStTime: 6,
+              attribute: [
+                [
+                  {
+                    _id: "67c3820043389cc312583f14",
+                    name: "asdadsas",
+                    value: "dasdasda",
+                    __v: 0,
+                  },
+                ],
+              ],
+              descrition: [],
+              operation: [
+                {
+                  name: "sadfsaf",
+                  stTime: 6,
+                },
+              ],
+              __v: 0,
+            },
+            {
+              _id: "67c3976043389cc312584142",
+              partName: "jhgsdljfas",
+              partStTime: 6,
+              attribute: [
+                [
+                  {
+                    _id: "67c3820043389cc312583f14",
+                    name: "asdadsas",
+                    value: "dasdasda",
+                    __v: 0,
+                  },
+                ],
+              ],
+              descrition: [],
+              operation: [
+                {
+                  name: "sadfsaf",
+                  stTime: 6,
+                },
+              ],
+              __v: 0,
             },
           ],
-          __v: 0,
-        },
-      ],
+          [
+            {
+              _id: "67c31cae061420cae3b2ac4d",
+              partName: "testing",
+              partStTime: 1,
+              attribute: [],
+              descrition: [],
+              operation: [
+                {
+                  name: "test",
+                  stTime: 1,
+                },
+              ],
+              __v: 0,
+            },
+          ],
+          [
+            {
+              _id: "67c0dff63698213a19a3d8d6",
+              partName: "1",
+              partStTime: 1,
+              attribute: [],
+              descrition: [],
+              operation: [
+                {
+                  name: "23123123",
+                  stTime: 1,
+                },
+              ],
+              __v: 0,
+            },
+          ],
+        ],
+        attribute: [
+          [
+            {
+              _id: "67c3820543389cc312583f16",
+              name: "asdasdas",
+              value: "dasdasdas",
+              __v: 0,
+            },
+          ],
+        ],
+        descrition: [
+          [
+            {
+              _id: "67c3810543389cc312583eb8",
+              name: "RWERWQERQW",
+              value: "ERWERQWER",
+              __v: 0,
+            },
+          ],
+        ],
+        operation: [
+          {
+            name: "asdA",
+            stTime: 1231231,
+          },
+        ],
+        __v: 0,
+      },
     ],
     attribute: [
       [
@@ -438,11 +433,8 @@ const BuildDataPage = () => {
   return (
     <div>
       <div className="flex flex-col gap-2 mx-2">
-        {/* <Test props={FetchSimulation} /> */}
         <ProductionProvider>
-          <h3>You are building a model data</h3>
-          <SelectPartToUpdate array={FetchSimulation} />
-          <Model />
+          <BuildNavBar />
         </ProductionProvider>
       </div>
     </div>
