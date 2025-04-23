@@ -26,7 +26,7 @@ const SelectPartToUpdate = ({ array }: SelectPartToUpdate) => {
   });
 
   return (
-    <div>
+    <div className="mt-3">
       <select
         defaultValue="Pick a color"
         className="select"

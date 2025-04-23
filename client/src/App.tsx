@@ -20,6 +20,7 @@ function App(): ReactElement {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="buildData" element={<BuildDataPage />} />
+
           <Route path="buildPlan" element={<BuildPlanData />} />
         </Routes>
       </div>

@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 type PropType = {
-  props: string | undefined;
+  props: string | null;
 };
 
 const NameInput = ({ props }: PropType) => {
-  const [name, setName] = useState<string>("");
+  const [name, setName] = useState<string | null>("");
 
   useEffect(() => {
     props ? setName(props) : setName("");
