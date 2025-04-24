@@ -14,7 +14,7 @@ const BuildNavBar = () => {
         <h3 className="bg-info p-2 my-2 rounded-sm">
           Pick a part to Update, Create or Change
         </h3>
-        <div className="flex gap-1">
+        {/* <div className="flex gap-1">
           <button
             onClick={() => SetRender(<Piece />)}
             className="btn btn-success"
@@ -26,15 +26,15 @@ const BuildNavBar = () => {
             className="btn btn-success"
           >
             SubPiece
-          </button>
+          </button> */}
 
-          <button
-            onClick={() => SetRender(<Model />)}
-            className="btn btn-success"
-          >
-            Model
-          </button>
-          <button
+        <button
+          onClick={() => SetRender(<Model />)}
+          className="btn btn-success"
+        >
+          Model
+        </button>
+        {/* <button
             onClick={() => SetRender(<Attribute />)}
             className="btn btn-success"
           >
@@ -45,8 +45,8 @@ const BuildNavBar = () => {
             className="btn btn-success"
           >
             Description
-          </button>
-        </div>
+          </button> */}
+        {/* </div> */}
         {Render}
       </div>
     </>

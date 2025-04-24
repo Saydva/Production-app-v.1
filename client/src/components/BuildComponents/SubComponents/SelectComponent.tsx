@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import { piece } from "../../utils/Context";
 import { subPiece } from "../../utils/Context";
 
@@ -10,7 +11,7 @@ type propsSubpieceType = {
 };
 
 const SelectComponent = ({ props }: propsPieceType | propsSubpieceType) => {
-  const listOfPropsArray: any = props?.map((item, index) => (
+  const listOfPropsArray: JSX.Element[] = props?.map((item, index: number) => (
     <li key={index} className="alert alert-info max-w-80 my-2">
       {JSON.stringify(item.partName)}
     </li>

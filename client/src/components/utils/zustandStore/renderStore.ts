@@ -7,7 +7,7 @@ type RenderStoreType = {
 }
 
 type Action = {
-    setElement: (firstName: RenderStoreType[`element`]) => void
+    setElement: (element: RenderStoreType[`element`]) => void
     
   }
 

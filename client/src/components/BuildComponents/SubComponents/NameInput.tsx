@@ -1,33 +1,29 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 type PropType = {
   props: string | null;
 };
 
 const NameInput = ({ props }: PropType) => {
-  const [name, setName] = useState<string | null>("");
-
-  useEffect(() => {
-    props ? setName(props) : setName("");
-  }, [props]);
+  useEffect(() => {}, [props]);
 
   const inputName = useRef<HTMLInputElement | null>(null);
 
   const handleNameInputValue = () => {
     if (inputName.current) {
-      setName(inputName.current.value);
+      console.log("inputName.current");
     }
   };
 
   return (
     <div>
       <input
-        value={name}
+        value={props}
         ref={inputName}
         type="text"
         placeholder="Type here"
         className="input"
         onChange={(e) => {
-          setName(e.target.value);
+          console.log(e);
         }}
       />
       <button
