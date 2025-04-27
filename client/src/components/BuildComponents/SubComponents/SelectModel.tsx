@@ -10,7 +10,7 @@ type SelectPartToUpdate = {
 };
 
 const SelectPartToUpdate = ({ array }: SelectPartToUpdate) => {
-  const SelectModel = useModelStore((state) => state.selectModel);
+  const SelectModel = useModelStore((state) => state.updateModel);
 
   const ListOptions = array.map((e: NameStTime, index: number) => {
     return (

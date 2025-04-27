@@ -1,22 +1,28 @@
 import {create} from "zustand"
-import { model } from "../Context"
+import { model } from "../myTypes"
 
-type ModelStoreType = {initModel:model}
+type ModelStoreType = {
+    Model:model           
+}
 
 type ModelAction = {
-    selectModel : (model:ModelStoreType[`initModel`])=>void
-  
+    updateModel : (model:ModelStoreType[`Model`])=>void
+    changeName : (text:string)=>void
 }
-export const initModel={
+
+export const initModel :model={
     partName:"",
     partStTime:0,
-    pieces: [],
+    pieces:[],
     subPieces: [],
     attribute: {name:"", value:""},
     description: {name:"", value:""},
     operation: {name:"", stTime:0}
 }
 
-export const useModelStore= create<ModelStoreType & ModelAction>((set)=>({initModel:initModel,
-    selectModel: (model) => set(() => ({ initModel:model })),    
+export const useModelStore = create <ModelStoreType & ModelAction > ((set)=>({
+    Model:initModel,  
+    updateModel: (newOne) => set(() => ({ Model:newOne })),
+    changeName: (text) => set((state)=>({Model:{...state.Model, partName:text} }))
 }))
+

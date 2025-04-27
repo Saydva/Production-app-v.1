@@ -1,8 +1,10 @@
-type PropsType = {
-  props: { name: string; stTime: number };
-};
+import { operation } from "../../utils/myTypes";
 
-const OperationComponent = ({ props }: PropsType) => {
+interface PropType {
+  props: operation;
+}
+
+const OperationComponent = ({ props }: PropType) => {
   return (
     <div className="flex flex-col gap-2">
       <input
