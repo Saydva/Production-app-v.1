@@ -4,7 +4,6 @@ import SelectModel from "./SubComponents/SelectModel";
 import SelectComponentFromArray from "./SubComponents/SelectComponentFromArray";
 import Attribute from "./SubComponents/Attibute";
 import Description from "./SubComponents/Description";
-
 import OperationComponent from "./SubComponents/OperationComponent";
 import { useModelStore } from "../utils/zustandStore/modelStore";
 import { MongoDbData } from "../utils/MongoDbClone";

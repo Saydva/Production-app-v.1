@@ -14,8 +14,6 @@ type ModelAction = {
     changeDescriptionValue : (text:string)=>void
     changeOperationName : (text:string)=>void
     changeOperationValue : (num:number)=>void
-
-
 }
 
 export const initModel :model={
