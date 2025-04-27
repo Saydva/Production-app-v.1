@@ -6,7 +6,11 @@ type propsType = {
   props: piece[] | subPiece[] | undefined;
 };
 
-const SelectComponentFromArray = ({ props }: propsType) => {
+type NameType = {
+  name: string;
+};
+
+const SelectComponentFromArray = ({ props, name }: propsType & NameType) => {
   const listOfPropsArray: JSX.Element[] = props?.map(
     (item: piece, index: number) => (
       <li key={index} className="alert alert-info max-w-80 my-2">
@@ -16,10 +20,14 @@ const SelectComponentFromArray = ({ props }: propsType) => {
   );
   return (
     <div>
-      <select defaultValue="Pick a color" className="select">
-        <option disabled={true}>Pick a color</option>
-        <option>Fetch Data</option>
-      </select>
+      <label className="floating-label">
+        <select defaultValue="Pick a color" className="select">
+          <option disabled={true}>Pick a color</option>
+          <option>Fetch Data</option>
+        </select>
+        <span>{name}</span>
+      </label>
+
       <ul>{listOfPropsArray}</ul>
     </div>
   );

@@ -15,15 +15,18 @@ const StandartTimeInput = ({ props }: PropType) => {
 
   return (
     <div>
-      <input
-        readOnly
-        ref={inputPartStTime}
-        value={partStTime}
-        type="text"
-        placeholder="Type here"
-        className="input"
-        onChange={(e) => setPartStTime(Number(e.target.value))}
-      />
+      <label className="floating-label">
+        <input
+          readOnly
+          ref={inputPartStTime}
+          value={partStTime}
+          type="text"
+          placeholder="partStTime"
+          className="input input-md"
+          onChange={(e) => setPartStTime(Number(e.target.value))}
+        />
+        <span>partStTime</span>
+      </label>
     </div>
   );
 };

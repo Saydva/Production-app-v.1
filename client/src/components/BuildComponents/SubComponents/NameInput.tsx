@@ -8,22 +8,19 @@ const NameInput = ({ props }: PropType) => {
   const inputName = useRef<HTMLInputElement | null>(null);
   const changeName = useModelStore((state) => state.changeName);
 
-  // const handleNameInputValue = () => {
-  //   if (inputName.current) {
-  //     console.log("inputName.current");
-  //   }
-  // };
-
   return (
-    <div>
-      <input
-        value={props}
-        ref={inputName}
-        type="text"
-        placeholder="Type here"
-        className="input"
-        onChange={(e) => changeName(e.target.value)}
-      />
+    <div className="flex flex-row">
+      <label className="floating-label ">
+        <span>partName</span>
+        <input
+          value={props}
+          ref={inputName}
+          type="text"
+          placeholder="partName"
+          className="input input-md w-80"
+          onChange={(e) => changeName(e.target.value)}
+        />
+      </label>
       <button className="btn btn-accent mx-2 min-w-20">Save</button>
     </div>
   );

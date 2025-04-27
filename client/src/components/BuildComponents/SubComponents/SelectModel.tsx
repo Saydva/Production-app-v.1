@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { initModel, useModelStore } from "../../utils/zustandStore/modelStore";
 
 type NameStTime = {
@@ -11,6 +12,7 @@ type SelectPartToUpdate = {
 
 const SelectPartToUpdate = ({ array }: SelectPartToUpdate) => {
   const SelectModel = useModelStore((state) => state.updateModel);
+  const Input = useRef(null);
 
   const ListOptions = array.map((e: NameStTime, index: number) => {
     return (
@@ -23,7 +25,7 @@ const SelectPartToUpdate = ({ array }: SelectPartToUpdate) => {
   return (
     <div className="mt-3">
       <select
-        defaultValue="Pick a color"
+        ref={Input}
         className="select"
         onChange={(e) =>
           SelectModel(e.target.value ? JSON.parse(e.target.value) : "")
@@ -34,7 +36,7 @@ const SelectPartToUpdate = ({ array }: SelectPartToUpdate) => {
         </option>
         {ListOptions}
       </select>
-      <button className="btn btn-secondary mx-2 min-w-20">Create</button>
+      {/* <button className="btn btn-secondary mx-2 min-w-20">Create</button> */}
     </div>
   );
 };
