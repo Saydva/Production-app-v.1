@@ -12,4 +12,4 @@ const AttributeSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Attribute", AttributeSchema);
+export const Attribute = mongoose.model("Attribute", AttributeSchema);

@@ -24,4 +24,4 @@ const SubpieceSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Subpiece", SubpieceSchema);
+export const SubPiece = mongoose.model("Subpiece", SubpieceSchema);

@@ -12,4 +12,4 @@ const DescriptionSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Description", DescriptionSchema);
+export const Description = mongoose.model("Attribute", DescriptionSchema);

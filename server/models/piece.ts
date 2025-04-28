@@ -22,4 +22,4 @@ const PieceSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Piece", PieceSchema);
+export const Piece = mongoose.model("Piece", PieceSchema);
