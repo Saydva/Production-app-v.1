@@ -12,4 +12,5 @@ const DescriptionSchema = new mongoose.Schema({
   },
 });
 
-export const Description = mongoose.model("Attribute", DescriptionSchema);
+export default mongoose.model("Description", DescriptionSchema); // Export the model for use in other parts of the application
+// Ensure this is not duplicated in other files within the same scope

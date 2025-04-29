@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const PieceSchema = new mongoose.Schema({
+const ModelSchema = new mongoose.Schema({
   partName: {
     type: String,
     required: true,
@@ -10,16 +10,21 @@ const PieceSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  piecec: {
+    type: Array,
+  },
+  subPiecec: {
+    type: Array,    
+  },
   attribute: {
     type: Array,
   },
- descrition: {
+ description: {
     type: Array,
   },
   operation: {
     type: Array,
-    required: true,
   },
 });
 
-export const Piece = mongoose.model("Piece", PieceSchema);
+export default mongoose.model("Model", ModelSchema);

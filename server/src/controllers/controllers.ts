@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import { Model } from "../models/model";
-import { SubPiece } from "../models/subpiece";
-import { Piece } from "../models/piece";
-import { Attribute } from "../models/attribute";
-import { Description } from "../models/description";
+import Model from "../models/model";
+import SubPiece from "../models/subpiece";
+import Piece from "../models/piece";
+import Attribute from "../models/attribute";
+import Description from "../models/description";
 
 //ATTRIBUTE CONTROLLER
 // import { Attribute } from '../models/attribute';
@@ -37,7 +37,7 @@ async function CreateAttribute(req: Request, res: Response) {
     const { name, value } = req.body;
     const newAttribute = new Attribute({ name, value });
     await newAttribute.save();
-    res.status(201).json({ data: newAttribute });
+    res.status(201).json({ message: "Attribute created successfully", data: newAttribute });
   } catch (error) {
     console.error("Error creating model:", error);
     res.status(400).send("Internal Server Error");

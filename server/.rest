@@ -1,0 +1,26 @@
+// get all data
+###
+GET http://localhost:5000/descriptions
+// get one data
+###
+POST http://localhost:5000/descriptions
+Content-Type: application/json
+
+{
+    "name": "test",
+    "value": "test"
+}
+// create one data 
+// get all data
+###
+GET http://localhost:5000/attributes
+// get one data
+###
+POST http://localhost:5000/attributes
+Content-Type: application/json
+
+{
+    "name": "test2",
+    "value": "test2"
+}
+// create one data

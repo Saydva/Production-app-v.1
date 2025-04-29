@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 
-const ModelSchema = new mongoose.Schema({
+const SubpieceSchema = new mongoose.Schema({
   partName: {
     type: String,
-    required: true,
     unique: true,
   },
   partStTime: {
@@ -13,18 +12,16 @@ const ModelSchema = new mongoose.Schema({
   piecec: {
     type: Array,
   },
-  subPiecec: {
-    type: Array,    
-  },
   attribute: {
     type: Array,
   },
- description: {
+ descrition: {
     type: Array,
   },
   operation: {
     type: Array,
+    required: true,
   },
 });
 
-export const Model = mongoose.model("Model", ModelSchema);
+export default mongoose.model("Subpiece", SubpieceSchema);

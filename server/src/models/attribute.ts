@@ -12,4 +12,5 @@ const AttributeSchema = new mongoose.Schema({
   },
 });
 
-export const Attribute = mongoose.model("Attribute", AttributeSchema);
+export default mongoose.model("Attribute", AttributeSchema);
+// Ensure this is not duplicated in other files within the same scope
