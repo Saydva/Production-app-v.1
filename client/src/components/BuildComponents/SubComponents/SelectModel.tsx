@@ -10,7 +10,11 @@ type SelectPartToUpdate = {
   array: NameStTime[];
 };
 
-const SelectPartToUpdate = ({ array }: SelectPartToUpdate) => {
+type NameOf = {
+  nameOf: string;
+};
+
+const SelectModel = ({ array, nameOf }: SelectPartToUpdate & NameOf) => {
   const SelectModel = useModelStore((state) => state.updateModel);
   const Input = useRef(null);
 
@@ -32,13 +36,12 @@ const SelectPartToUpdate = ({ array }: SelectPartToUpdate) => {
         }
       >
         <option value={JSON.stringify(initModel)}>
-          Create Model or pick one to change
+          Create {nameOf} or pick one to change
         </option>
         {ListOptions}
       </select>
-      {/* <button className="btn btn-secondary mx-2 min-w-20">Create</button> */}
     </div>
   );
 };
 
-export default SelectPartToUpdate;
+export default SelectModel;

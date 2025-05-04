@@ -7,8 +7,7 @@ type RenderStoreType = {
 }
 
 type Action = {
-    setElement: (element: RenderStoreType[`element`]) => void
-    
+    setElement: (element: RenderStoreType[`element`]) => void    
   }
 
 export const useRender = create<RenderStoreType & Action>((set)=>

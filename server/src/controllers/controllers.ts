@@ -12,7 +12,7 @@ async function GetAllAttributes(req: Request, res: Response) {
   // Logic to get all attributes
   try {
     const AttributeFindAll = await Attribute.find();
-    res.status(200).json({ data: AttributeFindAll });
+    res.status(200).json( AttributeFindAll );
   } catch (error) {
     console.error("Error fetching models:", error);
     res.status(400).send("Internal Server Error");
@@ -84,7 +84,7 @@ async function GetAllDescriptions(req: Request, res: Response) {
   // Logic to get all descriptions
   try {
     const DescriptionFindAll = await Description.find();
-    res.status(200).json({ data: DescriptionFindAll });
+    res.status(200).json( DescriptionFindAll );
   } catch (error) {
     console.error("Error fetching models:", error);
     res.status(400).send("Internal Server Error");

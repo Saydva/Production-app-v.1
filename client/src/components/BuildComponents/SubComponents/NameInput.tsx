@@ -21,7 +21,6 @@ const NameInput = ({ props }: PropType) => {
           onChange={(e) => changeName(e.target.value)}
         />
       </label>
-      <button className="btn btn-accent mx-2 min-w-20">Save</button>
     </div>
   );
 };

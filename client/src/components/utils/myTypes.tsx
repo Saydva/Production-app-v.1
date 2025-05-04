@@ -39,3 +39,16 @@ export type model = {
   description: description;
   operation: operation;
 };
+
+export type DbObject = {
+  attributes: attribute[];
+  descriptions: description[];
+  pieces: piece[];
+  subpieces: subPiece[];
+  models: model[];
+};
+
+export interface Message {
+  type: "info" | "error" | "warning" | "success";
+  message: string;
+}

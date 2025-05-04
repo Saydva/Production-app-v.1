@@ -1,21 +1,17 @@
-import { description } from "../../utils/myTypes";
+import { attribute } from "../../utils/myTypes";
 import { useModelStore } from "../../utils/zustandStore/modelStore";
 
 type PropsType = {
-  props: description;
+  props: attribute;
 };
 
 type NameType = {
   name: string[];
 };
 
-const Description = ({ props, name }: PropsType & NameType) => {
-  const ChangeDescriptionName = useModelStore(
-    (state) => state.changeDescriptionName
-  );
-  const ChangeDescriptionValue = useModelStore(
-    (state) => state.changeDescriptionValue
-  );
+const AttributeComponent = ({ props, name }: PropsType & NameType) => {
+  const ChangeAttName = useModelStore((state) => state.changeAttributeName);
+  const ChangeAttValue = useModelStore((state) => state.changeAttributeValue);
   return (
     <div>
       <div className="flex flex-col gap-2">
@@ -25,7 +21,7 @@ const Description = ({ props, name }: PropsType & NameType) => {
             value={props?.name}
             placeholder={`${name[0]}`}
             className="input input-md"
-            onChange={(e) => ChangeDescriptionName(e.target.value)}
+            onChange={(e) => ChangeAttName(e.target.value)}
           />
           <span>{`${name[0]}`}</span>
         </label>
@@ -35,7 +31,7 @@ const Description = ({ props, name }: PropsType & NameType) => {
             value={props?.value}
             placeholder={`${name[1]}`}
             className="input"
-            onChange={(e) => ChangeDescriptionValue(e.target.value)}
+            onChange={(e) => ChangeAttValue(e.target.value)}
           />
           <span>{`${name[1]}`}</span>
         </label>
@@ -44,4 +40,4 @@ const Description = ({ props, name }: PropsType & NameType) => {
   );
 };
 
-export default Description;
+export default AttributeComponent;
